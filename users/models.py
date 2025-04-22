@@ -59,6 +59,13 @@ class User(AbstractUser):
         verbose_name="Аватар",
         help_text="Загрузите аватар",
     )
+    tg_id = models.CharField(
+        max_length=100,
+        verbose_name="tg id",
+        help_text="Напишите свой id телеграмм",
+        null=True,
+        blank=True
+    )
     objects = UserManager()
 
     USERNAME_FIELD = "email"
